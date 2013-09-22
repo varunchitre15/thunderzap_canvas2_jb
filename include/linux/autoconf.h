@@ -1,7 +1,7 @@
 /*
  *
  * Automatically generated file; DO NOT EDIT.
- * Linux/arm 3.4.0 Kernel Configuration
+ * Linux/arm 3.4.5 Kernel Configuration
  *
  */
 #define CONFIG_RING_BUFFER 1
@@ -97,6 +97,7 @@
 #define CONFIG_SCSI_SCAN_ASYNC 1
 #define CONFIG_DQL 1
 #define CONFIG_EXT4_DEBUG 1
+#define CONFIG_DYNAMIC_FSYNC 1
 #define CONFIG_IP_NF_ARPTABLES 1
 #define CONFIG_HID_CHERRY 1
 #define CONFIG_MTK_GPS 1
@@ -507,6 +508,7 @@
 #define CONFIG_DM_UEVENT 1
 #define CONFIG_NET_VENDOR_I825XX 1
 #define CONFIG_NETFILTER_XT_MATCH_MAC 1
+#define CONFIG_DYNAMIC_PAGE_WRITEBACK 1
 #define CONFIG_ARM_NR_BANKS 8
 #define CONFIG_NETFILTER_XT_TARGET_NFLOG 1
 #define CONFIG_TCP_CONG_WESTWOOD 1
