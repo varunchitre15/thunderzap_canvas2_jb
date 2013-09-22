@@ -1,0 +1,50 @@
+From 0907356e4c30ebe2d4a5ffb0fcfb633695368740 Mon Sep 17 00:00:00 2001
+From: AdiPat <adithemagnificent@gmail.com>
+Date: Sun, 20 Jan 2013 00:49:36 +0530
+Subject: [PATCH] mm: Tweak vm dirty ratios
+
+Signed-off-by: AdiPat <adithemagnificent@gmail.com>
+---
+ mm/page-writeback.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/mm/page-writeback.c b/mm/page-writeback.c
+index 955fe35..ea48d5d 100644
+--- a/mm/page-writeback.c
++++ b/mm/page-writeback.c
+@@ -61,7 +61,7 @@ static inline long sync_writeback_pages(unsigned long dirtied)
+ /*
+  * Start background writeback (via writeback threads) at this percentage
+  */
+-int dirty_background_ratio = 10;
++int dirty_background_ratio = 80;
+ 
+ /*
+  * dirty_background_bytes starts at 0 (disabled) so that it is a function of
+@@ -78,7 +78,7 @@ static inline long sync_writeback_pages(unsigned long dirtied)
+ /*
+  * The generator of dirty data starts writeback at this percentage
+  */
+-int vm_dirty_ratio = 20;
++int vm_dirty_ratio = 90;
+ 
+ /*
+  * vm_dirty_bytes starts at 0 (disabled) so that it is a function of
+@@ -89,12 +89,12 @@ static inline long sync_writeback_pages(unsigned long dirtied)
+ /*
+  * The interval between `kupdate'-style writebacks
+  */
+-unsigned int dirty_writeback_interval = 5 * 100; /* centiseconds */
++unsigned int dirty_writeback_interval = 20 * 100; /* centiseconds */
+ 
+ /*
+  * The longest time for which data is allowed to remain dirty
+  */
+-unsigned int dirty_expire_interval = 30 * 100; /* centiseconds */
++unsigned int dirty_expire_interval = 10 * 100; /* centiseconds */
+ 
+ /*
+  * Flag that makes the machine dump writes/reads and block dirtyings.
+-- 
+1.8.4
+
